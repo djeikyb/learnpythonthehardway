@@ -1,0 +1,33 @@
+exercise 16, #3
+    totally unsure how to reduce the repitition of write() since
+    we're trying to write multiple strings and write() only lets
+    us pass one string at a time.
+
+    ANSWER: concatenation operator, +. From ex05
+
+exercise 17, #3
+    i can shorten the program to the import of argv plus a line
+    that reads and writes. lpthw says single line is possible.
+
+    this also removes the explicit closes. while i don't feel
+    that is bad, that feeling rests on my likely wrong under-
+    standing of of ex17#6.
+
+exercise 17, #6
+    why is close() necessary? strace shows closes in the proper
+    places. furthermore, it looks like code like this:
+
+        input = open("foo.txt")
+        input.close()
+
+    is redundant. judging by strace, it's algebraic, equivalent
+    to:
+
+        input = open("foo.txt")
+        open("foo.txt").close()
+
+    so now we have two opens and closes where before we only
+    had one.
+
+exercise 21, #2-4
+    what is meant by "formula"?
